@@ -28,7 +28,7 @@
                 <td onclick="digitBtnPressed(1)">1</td>
                 <td onclick="digitBtnPressed(2)">2</td>
                 <td onclick="digitBtnPressed(3)">3</td>
-                <td onclick="digitBtnPressed('+')">+</td>
+                <td onclick="operatorPressed('+')">+</td>
             </tr>
             <tr>
                 <td colspan="2" onclick="digitBtnPressed(0)">0</td>
@@ -41,8 +41,11 @@
         </table>
 
         <script>
-            var newLine = true
+            var newLine = true //Boolean variable. Determines if the next thing the user types should be on a new line
+            var value1;
+            var currentOperator;
 
+            //Event handler for when any digit button is pressed
             function digitBtnPressed(button){
 
                 if (newLine){
@@ -52,6 +55,18 @@
                     var currentValue = document.getElementById("inputBox").value;
                     document.getElementById("inputBox").value = currentValue + button;
                 }
+            }
+
+            //Event handler for when the AC button for screen cancellation is pressed
+            function clearDisplay(){
+                document.getElementById("inputBox").value = 0;
+                newLine = true;
+            }
+
+            function operatorPressed(operator){
+                currentOperator = operator;
+                value1 = parseInt(document.getElementById("inputBox").value);
+                newLine = true;
             }
         </script>
     </body>
