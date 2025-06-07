@@ -13,30 +13,30 @@
                 </td>
             </tr>
             <tr>
-                <td onclick="digitBtnPressed(7)">7</td>
-                <td onclick="digitBtnPressed(8)">8</td>
-                <td onclick="digitBtnPressed(9)">9</td>
-                <td onclick="operatorPressed('*')">x</td>
+                <td class="digitbutton" onclick="digitBtnPressed(7)">7</td>
+                <td class="digitbutton" onclick="digitBtnPressed(8)">8</td>
+                <td class="digitbutton" onclick="digitBtnPressed(9)">9</td>
+                <td class="operatorButton" onclick="operatorPressed('*')">x</td>
             </tr>
             <tr>
-                <td onclick="digitBtnPressed(4)">4</td>
-                <td onclick="digitBtnPressed(5)">5</td>
-                <td onclick="digitBtnPressed(6)">6</td>
-                <td onclick="operatorPressed('-')">-</td>
+                <td class="digitbutton" onclick="digitBtnPressed(4)">4</td>
+                <td class="digitbutton" onclick="digitBtnPressed(5)">5</td>
+                <td class="digitbutton" onclick="digitBtnPressed(6)">6</td>
+                <td class="operatorButton" onclick="operatorPressed('-')">-</td>
             </tr>
             <tr>
-                <td onclick="digitBtnPressed(1)">1</td>
-                <td onclick="digitBtnPressed(2)">2</td>
-                <td onclick="digitBtnPressed(3)">3</td>
-                <td onclick="operatorPressed('+')">+</td>
+                <td class="digitbutton" onclick="digitBtnPressed(1)">1</td>
+                <td class="digitbutton" onclick="digitBtnPressed(2)">2</td>
+                <td class="digitbutton" onclick="digitBtnPressed(3)">3</td>
+                <td class="operatorButton" onclick="operatorPressed('+')">+</td>
             </tr>
             <tr>
-                <td colspan="2" onclick="digitBtnPressed(0)">0</td>
-                <td onclick="clearDisplay()">AC</td>
-                <td onclick="operatorPressed('/')">/</td>
+                <td class="digitbutton" colspan="2" onclick="digitBtnPressed(0)">0</td>
+                <td class="ACButton" onclick="clearDisplay()">AC</td>
+                <td class="operatorButton" onclick="operatorPressed('/')">/</td>
             </tr>
             <tr>
-                <td colspan="4" onclick="equalsBtnPressed('=')">=</td>
+                <td class="operatorButton" colspan="4" onclick="equalsBtnPressed('=')">=</td>
             </tr>
         </table>
 
@@ -93,6 +93,9 @@
                         break;
                 }
                 document.getElementById("inputBox").value = finalTotal;
+
+                value1 = 0;
+                newLine = true;
             }
         </script>
     </body>
